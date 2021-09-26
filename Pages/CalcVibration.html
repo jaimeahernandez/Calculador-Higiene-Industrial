@@ -50,5 +50,51 @@
           </div>
         </div>
       </nav>
+    
+    <main class="container d-flex align-items-center justify-content-center alto-90">
+      
+    <!--Esto correponde al PRIMER INPUT para CalcVibration-->
+    <form id="form1" name="" method="post">
+      <div class="mx-auto mt-5" style="width: 550px;">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Ingrese ax: </span>
+          <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="" id="Valor1" autofocus placeholder="Digite la aceleracion en X">
+          <div class="p-0 input-group-lg ms-3">
+          <button onclick="Limpiar();" class="btn btn-primary">Limpiar</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <!--Esto correponde al SEGUNDO INPUT para CalcVibration-->
+      <div class="mx-auto" style="width: 550px;">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Ingrese ay: </span>
+          <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="" id="Valor2" autofocus placeholder="Digite la aceleracion en Y">
+        </div>
+      </div>
+      <br>
+      <br>
+      <!--Esto correponde al TERCER INPUT para CalcVibration-->
+      <div class="mx-auto" style="width: 550px;">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Ingrese az: </span>
+          <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="" id="Valor3" autofocus placeholder="Digite la aceleracion en Z">
+        </div>
+      </div>
+      <br>
+      <br>
+          <!--Este boton se usa para calcular el promedio ponderado ahv-->
+          <button onclick="PromedioAHV();">Calcular ahv</button><br><br>
+          <p>El resultado de la aceleracion promedio es: <span id="ResultadoAHV"></span></p>
+
+    </form>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets\js\logVibration.js"></script>
+
 </body>
 </html>
