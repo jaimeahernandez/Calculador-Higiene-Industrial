@@ -86,7 +86,7 @@
           <!--Este boton se usa para calcular el promedio ponderado ahv-->
           <input type="button" name="name" value="Calcular ahv" onclick="Promediar();" class="btn btn-primary">
           <br><br>
-          <p>El resultado de la aceleracion promedio es: <span id="ResultadoAHV"></span></p>
+          <p>El resultado de la aceleracion promedio ahv es: <span id="ResultadoAHV"></span></p>
 
     </form>
 
@@ -94,13 +94,12 @@
     
     <script type="text/javascript">
     function Promediar(){
-      var a=parseInt(document.getElementById("valor1").value);
-      var b=parseInt(document.getElementById("valor2").value);
-      var c=parseInt(document.getElementById("valor3").value);
-      var resultado=document.getElementById('ResultadoAHV').innerHTML=a+b+c;
+      var ax=parseFloat(document.getElementById("valor1").value);
+      var ay=parseFloat(document.getElementById("valor2").value);
+      var az=parseFloat(document.getElementById("valor3").value);
+      var resultado=document.getElementById('ResultadoAHV').innerHTML=Math.sqrt(ax**2+ay**2+az**2).toFixed(2);
       console.log(resultado);
     }
-    
     </script>
     
 
