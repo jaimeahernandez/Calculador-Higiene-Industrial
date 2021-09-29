@@ -64,7 +64,6 @@
         </div>
       </div>
       <br>
-      <br>
       <!--Esto correponde al SEGUNDO INPUT para CalcVibration-->
       <div class="mx-auto" style="width: 550px;">
         <div class="input-group input-group-lg">
@@ -72,7 +71,6 @@
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="" id="valor2" placeholder="Digite la aceleracion en Y">
         </div>
       </div>
-      <br>
       <br>
       <!--Esto correponde al TERCER INPUT para CalcVibration-->
       <div class="mx-auto" style="width: 550px;">
@@ -82,11 +80,23 @@
         </div>
       </div>
       <br>
+      <!--Esto correponde al CUARTO INPUT para CalcVibration-->
+      <div class="mx-auto" style="width: 550px;">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Ingrese Texp: </span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="" id="valor4" placeholder="Digite el tiempo de exposicion">
+        </div>
+      </div>
       <br>
           <!--Este boton se usa para calcular el promedio ponderado ahv-->
           <input type="button" name="name" value="Calcular ahv" onclick="Promediar();" class="btn btn-primary">
           <br><br>
-          <p>El resultado de la aceleracion promedio ahv es: <span id="ResultadoAHV"></span></p>
+          <p>El resultado de aceleracion ponderada ahv es: <span id="ResultadoAHV"></span></p>
+
+          <!--Este boton se usa para calcular la aceleracion 8 horas A(8)-->
+          <input type="button" name="name" value="Calcular A(8)" onclick="IndicadorA8();" class="btn btn-primary">
+          <br><br>
+          <p>El resultado de la aceleracion 8 horas A(8) es: <span id="ResultadoA8"></span></p>
 
     </form>
 
@@ -97,9 +107,17 @@
       var ax=parseFloat(document.getElementById("valor1").value);
       var ay=parseFloat(document.getElementById("valor2").value);
       var az=parseFloat(document.getElementById("valor3").value);
-      var resultado=document.getElementById('ResultadoAHV').innerHTML=Math.sqrt(ax**2+ay**2+az**2).toFixed(2);
-      console.log(resultado);
+      var ahv=document.getElementById('ResultadoAHV').innerHTML=Math.sqrt(ax**2+ay**2+az**2).toFixed(2);
+      console.log(ahv);
     }
+
+    function IndicadorA8(){
+      var ahv=document.getElementById('ResultadoAHV').innerHTML;
+      var Texp=parseFloat(document.getElementById("valor4").value);
+      var A8=document.getElementById('ResultadoA8').innerHTML=ahv*Math.sqrt(Texp/8).toFixed(2);
+      console.log(A8);
+    }
+
     </script>
     
 
