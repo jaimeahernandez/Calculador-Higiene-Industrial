@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+        <h4>Adicion de Numeros</h4>
+        <br><br>
+        <input type="text" placeholder="Escriba un numero" id="Num1"><br><br>
+        <input type="text" placeholder="Escriba un numero" id="Num2"><br><br>
+        <input type="text" placeholder="Escriba un numero" id="Num3"><br><br>
+        <input type="text" placeholder="Escriba un numero" id="Num4"><br><br>
+        <input type="button" name="name" value="calcular" onclick="sumar();">
+</head>
+<body>
+    <script type="text/javascript">
+    function sumar(){
+        var a=parseInt(document.getElementById("Num1").value);
+        var b=parseInt(document.getElementById("Num2").value);
+        var c=parseInt(document.getElementById("Num3").value);
+        var d=parseInt(document.getElementById("Num4").value);
+        var sumatoria;
+        sumatoria=a+b+c+d;
+        alert("El resultados de la sumatoria es; "+sumatoria);
+    }
+    </script>
+</body>
+</html>
